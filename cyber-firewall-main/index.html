@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>VMLG College — Cyber Security Intro</title>
+  <style>
+    :root{
+      --bg:#071326; --card:#092033; --accent:#20d6ff; --muted:#9fb6c8; --text:#eaf7ff;
+    }
+    html,body{
+      height:100%;
+      margin:0;
+      font-family:Inter,system-ui,Segoe UI,Arial;
+      color:var(--text);
+
+      /* === Cyber.jpg background === */
+      background: linear-gradient(rgba(2,16,26,0.85), rgba(5,24,38,0.9)),
+                  url("cyber.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+    .container{
+      min-height:100%;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:28px;
+      gap:18px;
+    }
+    header{width:100%;max-width:1000px;text-align:center}
+    h1{margin:0;font-size:34px;letter-spacing:0.6px;color:var(--accent)}
+    .card{width:100%;max-width:1000px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 12px 36px rgba(2,6,23,0.6)}
+    .lead{margin:0 0 12px;color:var(--muted);font-size:14px}
+    .controls{display:flex;flex-direction:column;gap:12px;align-items:center;justify-content:center;margin-top:14px}
+    .btn{
+      appearance:none;border:0;padding:10px 16px;border-radius:10px;font-weight:700;cursor:pointer;background:linear-gradient(90deg,var(--accent),#6cf1ff);color:#02242a;box-shadow:0 8px 20px rgba(32,214,255,0.12);width:180px;text-align:center
+    }
+    .secondary{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);padding:8px 12px;border-radius:10px}
+    footer{margin-top:10px;color:rgba(255,255,255,0.18);font-size:13px;text-align:center}
+    @media (max-width:720px){
+      h1{font-size:24px}
+      .card{padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="container" role="main" aria-labelledby="main-heading">
+    <header>
+      <h1 id="main-heading">VMLG College</h1>
+      <p class="lead">Cyber Security — Quick briefing</p>
+    </header>
+
+    <div class="controls" role="region" aria-label="intro controls">
+ 
+
+      <!-- New level buttons -->
+      <button class="btn" onclick="window.location.href='level1.html'">Level 1</button>
+      <button class="btn" onclick="window.location.href='level2.html'">Level 2</button>
+      <button class="btn" onclick="window.location.href='level3.html'">Level 3</button>
+    </div>
+
+    <footer>
+      Made by <strong>Satya, Megha</strong>
+    </footer>
+  </div>
+
+  <script>
+    function goToGame(){ window.location.href = "game.html"; }
+    document.getElementById('startGame').addEventListener('click', goToGame);
+    document.getElementById('skipIntro').addEventListener('click', goToGame);
+    window.addEventListener('keydown', (e) => { if (e.key === 'Enter') goToGame(); });
+  </script>
+</body>
+</html>
